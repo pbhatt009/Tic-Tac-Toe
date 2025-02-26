@@ -11,7 +11,10 @@ body{
    justify-content: center;
    align-items: center;
    box-sizing: border-box;
+   overflow-y: hidden;
 }
+
+
 .maincontainer{
     margin-top: 100px;
    justify-content: space-around;
@@ -39,11 +42,16 @@ body{
    
   }
 @media screen and (max-width: 650px){
+   
+
    .maincontainer{
-    margin-top: 30px;
+    
     height: 100vh;
     flex-direction: column;
     justify-content: baseline;
+    position: relative;
+    top:5vw;
+   
     
     
   
@@ -51,9 +59,10 @@ body{
    .game{
    
    
-    height: 80%;
+    height: 50%;
     width: 80vw;
-
+position:absolute;
+    top: 0px;
      grid-template-columns: repeat(3,20vw);
   grid-template-rows: repeat(3, 20vw);
 justify-content: center;
@@ -64,7 +73,11 @@ justify-content: center;
     .details{
         width: 100%;
         height: 30%;
-  position: relative;
+
+    }
+    .details{
+        position: absolute;
+        top:60vw;
     }
 
 }
@@ -84,16 +97,16 @@ justify-content: center;
  
 }
 #block1,#block2,#block3{
-    border-top: 2px solid rgb(255, 255, 255);
+    border-top: none;
 
 }
 #block1,#block4,#block7{
-    border-left: 2px solid rgb(255, 255, 255);
+    border-left:none;
 }
 #block7,#block8,#block9{
-    border-bottom: 2px solid rgb(255, 255, 255);}
+    border-bottom:none}
 #block3,#block6,#block9{
-    border-right: 2px solid rgb(255, 255, 255);
+    border-right: none;
 }
 .details{
     margin-top: 50px;
@@ -115,13 +128,13 @@ h1{
     top:15vw;
     height: 4px;
     width: 0;
-    background-color: rgb(199, 12, 12);
+    background-color: rgb(255, 6, 52);
+   
+   transition: width 1s ease-in-out; 
+   z-index: 1;
+
    
    
-
-transition: width 1s ease-in-out; 
-
-    
 }
 @media screen and (max-width: 650px){
     .line{
@@ -129,4 +142,7 @@ transition: width 1s ease-in-out;
         left:24vw;
         width:0;
         
-}}
+}
+    
+}
+
